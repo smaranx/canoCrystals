@@ -1,0 +1,27 @@
+.section{
+    &__education{
+        &-list{
+            .education{
+                &__list,
+                &__box{
+                    max-width: 50rem;
+                    width: 100%;
+                    @include respond(phone){
+                        max-width: 100%;
+                    }
+                }
+            }
+            .container{
+                @include respond(phone){
+                    flex-direction: column-reverse;
+                    display: flex;
+                }
+            }
+            .banner__slider{
+                @include respond(phone){
+                    margin-bottom: 4rem;
+                }
+            }
+        }
+    }
+}

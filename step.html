@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steps Line with Dash Design</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="steps-container">
+        <div class="step completed">Step 1</div>
+        <div class="step completed">Step 2</div>
+        <div class="step active">Step 3</div>
+        <div class="step">Step 4</div>
+        <div class="step">Step 5</div>
+    </div>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 600px;
+}
+
+.step {
+    position: relative;
+    flex: 1;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 4px;
+    border-top: 2px dashed #e0e0e0;
+    z-index: -1;
+    transition: border-color 0.3s;
+}
+
+.step.completed {
+    background-color: #4caf50;
+    color: white;
+    transform: scale(1.1);
+}
+
+.step.completed:not(:last-child)::after {
+    border-top-color: #4caf50;
+}
+
+.step.active {
+    background-color: #ff9800;
+    color: white;
+    transform: scale(1.2);
+}
+
+.step:hover {
+    background-color: #b0bec5;
+    cursor: pointer;
+}
+
+.step:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    z-index: -2;
+}
+
+    </style>
+</body>
+</html>

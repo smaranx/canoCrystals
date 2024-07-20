@@ -1,0 +1,40 @@
+.section{
+    &__breadcrumb{
+        &:not(:last-child){
+            margin-bottom: 2.5rem;
+        }
+    }
+}
+.breadcrumb{
+    display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    width: 100%;
+    list-style: none;
+    padding: 2rem 0;
+    flex-direction: row;
+    &__item{
+        display: flex;
+        text-align: left;
+        position: relative;
+        padding-right: 1.5rem;
+        margin-right: 1.5rem;
+        &:not(:last-child){
+            &::after{
+                content: '>';
+                position: absolute;
+                top: 50%;
+                right: -.4rem;
+                transform: translate(0, -50%);
+            }
+        }
+    }
+    &__link{
+        font-family: "Inter", sans-serif;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1.7rem;
+        text-align: left;
+
+    }
+}

@@ -1,0 +1,269 @@
+.banner{
+    @extend .disPlayInlineFlex;
+    position: relative;
+    &__image-box{
+        @extend .disPlayInlineFlex;
+        width: 100%;
+    }
+    &__image-content-picture{
+        @extend .disPlayInlineFlex;
+        width: 100%;
+    }
+    &__img{
+        width: 100%;
+    }
+    &__overlap &__textContent{
+        position: absolute;
+        &.bottomLeft{
+            bottom: 0;
+            left: 0
+        }
+        &.center{
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+        }
+    }
+    &__textContent{
+        @extend .disPlayInlineFlex;
+        transition: all .25s ease-in-out;
+        -webkit-transition: all .25s ease-in-out;
+        &--darkbg{
+            max-width: 50rem;
+            padding: 2rem;
+            background-color: rgba(0,0,0,0.41);
+            color: var(--color-white);
+        }
+        &--full{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: rgba(0,0,0,0.41);
+            color: #fff;
+            &.center{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            &.center{
+                justify-content: center;
+                align-items: center;
+                &-left{
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                }
+            }
+            &.white{
+
+            }
+        }
+    }
+    &__title{
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+
+        font-size: 2.6rem;
+        line-height: 3.3rem;
+        &--white{
+            color: var(--color-white);
+        }
+    }
+    &__link{
+        &,
+        &:link,
+        &:visited{
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+    
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            text-decoration: underline;
+
+            &:hover,
+            &:active,
+            &:focus{
+                text-decoration: none;
+            }
+        }
+    }
+    &__side-link{
+        &,
+        &:visited,
+        &:link{
+            font-family: "Inter", sans-serif;
+            font-size: 2.8rem;
+            font-weight: 400;
+            line-height: 3.3rem;
+            text-transform: uppercase;
+           
+        }
+        &::after{
+            content: '';
+            width: 100%;
+            height: 2px;
+            display: inline-block;
+            background: #fff;
+            vertical-align: top;
+            margin-top: 1rem;
+        }
+    }
+    &__slider{
+        .slick{
+            &-dots{
+                text-align: left;
+                li {
+                    width: 2.8rem;
+                        height: 2px;
+                    &:first-child{
+                        margin-left: 0;
+                    }
+                    button{
+                        width: 2.8rem;
+                        height: 2.5px;
+                        border-radius: 1rem;
+                        background: #919191;
+                        padding: 0;
+                    }
+                    &.slick{
+                        &-active{
+                            button{
+                                background: #000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__hover:hover &__textContent{
+        opacity: 0;
+        visibility: hidden;
+    }
+    &__hover{
+        cursor: pointer;
+        &-textContent{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            visibility: hidden;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            transition: all .25s ease-in-out;
+            -webkit-transition: all .25s ease-in-out;
+            &--darkbg{
+                background: rgba(#626262, .8);
+                color: #fff;
+                &::after{
+                    content:'';
+                    position:absolute;
+                    width: 80%;
+                    height: 80%;
+                    left:50%;
+                    top: 50%;
+                    border:1px solid #fff;
+                    transform: translate(-50%,-50%);
+                    -webkit-transform: translate(-50%,-50%);
+                }
+            }
+        }
+        &-title{
+            font-family: 'Rota';
+            font-size: 3.2rem;
+            font-weight: 700;
+            line-height: 4rem;
+        }
+    }
+    &__hover:hover &__hover-textContent{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__side{
+        display: flex;
+        justify-content: flex-start;
+        align-items:stretch;
+        flex-direction: row;
+        width: 100%;
+
+        background: #7D6C64;
+        @include respond(phone){
+            flex-direction: column;
+        }
+    }
+    &__side &__image-box{
+        max-width: 65%;
+        @include respond(phone){
+            max-width: 100%;
+        }
+    }
+    &__side &__textContent--side{
+        max-width: 35%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &.white{
+            color: var(--color-white);
+        }
+        @include respond(phone){
+            max-width: 100%;
+            padding: 6rem 0;
+        }
+    }
+    &__title{
+        &--primary{
+            font-family: "Inter", sans-serif;
+            font-size: 4.5rem;
+            font-weight: 400;
+            line-height: 5.4rem;
+            text-align: center;
+        }
+    }
+    &__text{
+        &--primary{
+            font-family: "Poppins", sans-serif;
+            font-size: 2.4rem;
+            font-weight: 400;
+            line-height: 3.6rem;
+            text-align: center;
+
+        }
+    }
+
+    &__mainSlider{
+        .slick{
+            &-prev{
+                left: 2.5rem;
+            }
+            &-next{
+                right: 2.5rem;
+            }
+        }
+    }
+
+    &__content{
+        max-width: 50rem;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    &__commitment &__content{
+        margin-left: 8.4rem;
+        @include respond(phone){
+            margin-left: 0;
+            padding: 2rem;
+        }
+    }
+}

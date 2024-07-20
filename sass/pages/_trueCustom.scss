@@ -1,0 +1,121 @@
+.section{
+    &__mainBanner{
+        .banner{
+            &__title{
+                font-family: "Inter", sans-serif;
+                font-size: 4.5rem;
+                font-weight: 600;
+                line-height: 5.4rem;
+                text-align: center;
+                color: #fff;
+            }
+        }
+    }
+    &__step{
+        .section{
+            &__title{
+                font-size: 3.5rem;
+                font-weight: 500;
+                line-height: 4.2rem;
+                text-align: center;
+                color: #000;
+                margin-bottom: 6rem;
+            }
+            &__content{
+                @include respond(phone){
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+    &__lettry{
+        &:not(:last-child){
+            margin-bottom: 10rem;
+        }
+        .banner{
+            &__image-box{
+                margin-bottom: 3rem;
+            }
+            &__textContent{
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+        }
+    }
+    &__customRing-step{
+        &:not(:last-child){
+            margin-bottom: 10rem;
+        }
+        .col-1-of-3{
+           &:not(:last-child){
+             margin-right: 0;
+             
+           }
+        }
+        .box__content-text{
+            max-width: 21.8rem;
+            margin: 0 auto;
+        }
+    }
+    &__customRing-step &__content{
+        
+        [class^="col-"]:not(:last-child){
+            @include respond(phone){
+                margin-bottom: 8rem;
+                width: 100%;
+             }
+        }
+    }
+    &__trueCustomRing{
+        .banner{
+            &__textContent{
+               
+            }
+            &__title {
+                font-family: "Inter", sans-serif;
+                font-size: 4.5rem;
+                font-weight: 600;
+                line-height: 5.4rem;
+                text-align: center;
+                color: #000;
+
+                max-width: 90rem;
+                margin-bottom: 3.6rem;
+            }
+        }
+    }
+    &__14day{
+        .col-1-of-3{
+            &:not(:last-child){
+                margin-right: 5rem;
+                @include respond(phone){
+                    margin-bottom: 0;
+                    margin-right: 0;
+                    width: 100%;
+                }
+            }
+        }
+        .box{
+            &__content{
+                &.step--1 .box__content-iconBox--icon{
+                    &::after{
+                        right: -5.4rem;
+                        width: 55%;
+                    }
+                }
+                &.step--2 .box__content-iconBox--icon{
+                    &::after{
+                        left: 0rem;
+                    }
+                }
+                &.step--3 .box__content-iconBox--icon{
+                    &::after{
+                        left: -5.5rem;
+                        width: 55%;
+                    }
+                }
+            }
+        }
+    }
+}

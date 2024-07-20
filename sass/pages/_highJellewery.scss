@@ -1,0 +1,119 @@
+
+
+.section{
+    &_engagementBridal{
+        .banner{
+            &__side{
+                background: #CDB7AA;
+                    &-link{
+                    &::after{
+                        background: #5A4A42;
+                    }
+                }
+            }
+        }
+    }
+    &__founder{
+        .container{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            @include respond(phone){
+                flex-direction: column;
+                [class^="col-"]{
+                    width: 100%;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    &__step &__titleBlock{
+        max-width: 100%;
+    }
+    &__step &__content{
+        flex-direction: row;
+    }
+    &_FineJewellery{
+        .slick-slide {
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+.founder{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 5rem;
+    @include respond(phone){
+        padding-left: 0;
+    }
+    &__img{
+        width: 100%;
+    }
+    &__name{
+        @extend .subTitle__h2;
+        margin-bottom: 1.4rem;
+    }
+    &__detail,
+    &__position{
+        font-family: "Inter", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 2.5rem;
+        margin-bottom: 1.4rem;
+    }
+}
+.product{
+    &__slider{
+        max-width: 48rem;
+        width: 100%;
+        margin: 0 auto;
+        .slick{
+            &-arrow{
+                height: auto;
+                width: auto;
+                z-index: 1;
+                @include respond(phone){
+                    background: rgba(255, 255, 255, 0.5);
+                    padding: 1rem;
+                }
+                &::before{
+                    font-family: "Inter", sans-serif;
+                    font-size: 2.8rem;
+                    font-weight: 400;
+                    line-height: 3.3rem;
+                    text-align: left;
+                }
+            }
+            &-arrow &-disabled{
+                opacity: 0;
+            }
+            &-prev{
+                left: -5rem;
+                @include respond(phone){
+                    left: 2.5rem;
+                    background: rgba(255, 255, 255, 0.5);
+                }
+                &::before{
+                    content: '<';
+                    color: #000;
+                }
+            }
+            &-next{
+                right: -5rem;
+                @include respond(phone){
+                    right: 2.5rem;
+                    
+                }
+                &:before{
+                    content: '>';
+                    color: #000;
+                }
+            }
+        }
+    }
+}

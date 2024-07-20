@@ -1,0 +1,278 @@
+button{
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.btn{
+    &__primary{
+        &,
+        &:link,
+        &:visited{
+            background: #CDB7AA;
+            padding: 1rem;
+
+            font-family: 'Rota';
+            font-weight: 600;
+            font-size: 1.2rem;
+            line-height: 1.7rem;
+            border: 0;
+            height: 4rem;
+            vertical-align: top;
+            text-transform: capitalize;
+            text-align: center;
+            &:hover,
+            &:focus,
+            &:active{
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__secondary{
+        font-family: "Inter", sans-serif;
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 2.6rem;
+
+        padding: 1.5rem;
+
+        text-align: left;
+        position: relative;
+        background: #E9D8D1;
+        display: inline-block;
+        max-width: 25rem;
+        width: 100%;
+        color: #333;
+        @include respond(tab-port){
+            max-width: 20rem;
+        }
+        &::after{
+            content: '';
+            width: 2rem;
+            height: 2rem;
+            background-image: url(../img/icons/rightArrow.svg);
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+
+        }
+        &:hover,
+        &:active,
+        &:focus{
+            text-decoration: none;
+            background: rgba($color: #E9D8D1, $alpha: .8);
+        }
+        &--small{
+            padding: 1.2rem 2.5rem;
+            max-width: 23rem;
+            @include respond(tab-port){
+                padding: 1.2rem 1rem;
+                max-width: 19rem;
+            }
+            &::after{
+                right: 2.5rem;
+            }
+        }
+
+    }
+    &__banner{
+        &,
+        &:link,
+        &:visited{
+            border:1px solid #fff;
+            color: #fff;
+            background: rgba(0,0,0,.41);
+    
+            font-family: "Poppins", sans-serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            line-height: 2.4rem;
+            text-align: center;
+            padding: 1rem;
+
+            &:hover,
+            &:active,
+            &:focus{
+                text-decoration: none;
+            }
+        }
+        
+        &--7D6C64{
+            &,
+            &:link,
+            &:visited{
+                padding: 2rem 5rem;
+                background: #7D6C64;
+                border: 1px solid #A3978B;
+
+                &:hover,
+                &:focus,
+                &:active{
+                    text-decoration: none;
+                    background: rgba(125, 108, 100, 0.729);
+                }
+            }
+        }
+        &--primary{
+            &,
+            &:link,
+            &:visited{
+                background: transparent;
+                padding: 1.6rem 3rem;
+
+                font-family: "Poppins", sans-serif;
+                font-size: 2.4rem;
+                font-weight: 500;
+                line-height: 3.6rem;
+
+                transition: all .25s ease-in-out;
+                -webkit-transition: all .25s ease-in-out;
+
+                &:hover,
+                &:focus,
+                &:active{
+                    text-decoration: none;
+                    background: rgba(255,255,255,.5);
+                    color: #000;
+                }
+            }
+        }
+    }
+    &__list{
+        .btn{
+            &:not(:last-child){
+                margin-right: 1.5rem;
+                margin-bottom: 1.5rem;
+                @include respond(tab-port){
+                    margin-right: 1rem;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+
+    &__catBtn{
+        &,
+        &:link,
+        &:visited{
+            font-family: 'Rota';
+            font-size: 1.8rem;
+            font-weight: 600;
+            line-height: 2.2rem;
+            text-align: center;
+            display: inline-block;
+
+            padding: 1.5rem;
+            width: 28rem;
+            max-width: 100%;
+
+            background: #CDB7AA;
+            color: #fff;
+
+            border: 1px solid #A3978B;
+
+            transition: all .25s ease-in-out;
+            -webkit-transition: all .25s ease-in-out;
+
+            &:hover,
+            &:active,
+            &:focus{
+                text-decoration: none;
+                background:rgba($color: #CDB7AA, $alpha: .5);
+            }
+        }
+    }
+
+    &__Question{
+        &,
+        &:link,
+        &:visited{
+            font-family: "Poppins", sans-serif;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 2.4rem;
+            color: #000;
+            max-width: 23rem;
+            width: 100%;
+            padding: 1.6rem 2.6rem;
+            // background: #E9D8D1;
+            border:1px solid #000;
+            transition: all .25s ease-in-out;
+            -webkit-transition: all .25s ease-in-out;
+            box-shadow: 0px 0px 0px 0px #9e9c9c;
+
+            &:hover,
+            &:focus,
+            &:active{
+                text-decoration: none;
+                background: #E9D8D1;
+                border-color: #E9D8D1;
+                box-shadow: .4rem .3rem .5rem 0px #9e9c9c;
+            }
+
+            @include respond(tab-port){
+                padding: 1.6rem 2rem;
+            }
+        }
+    }
+    &__summary{
+        &,
+        &:link,
+        &:visited{
+            background: rgba(231, 225, 220, 0.639);
+            font-family: "Inter", sans-serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            line-height: 1.6rem;
+            text-align: center;
+            padding: 1rem 1.7rem;
+        }
+    }
+    &__addtoCart{
+        &,
+        &:link,
+        &:visited{
+            font-family: "Inter", sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 4rem;
+            letter-spacing: 0.1599999964237213px;
+            text-align: center;
+
+            color: #fff;
+            background: #5A4A42;
+
+            padding: 0 2rem;
+            width: 100%;
+            display: inline-block;
+
+        }
+    }
+    &__bookAnApp{
+        &,
+        &:link,
+        &:visited{
+            font-family: "Inter", sans-serif;
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 4rem;
+            letter-spacing: 0.1599999964237213px;
+            text-align: center;
+            max-width: 26rem;
+            width: 100%;
+            border: 1px solid #626262;
+            color: #626262;
+            background: #fff;
+            &:hover{
+                color: rgba(98, 98, 98, 0.767);
+                border-color: rgba(98, 98, 98, 0.767);
+            }
+
+        }
+    }
+
+}

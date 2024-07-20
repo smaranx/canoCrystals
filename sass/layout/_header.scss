@@ -1,0 +1,77 @@
+.header{
+    @extend .disInlineblock;
+    &__topblock{
+        border-bottom: 0.2px solid #AEAEAE;
+    }
+    &__topblock,
+    &__bottomblock{
+        display: inline-block;
+        width: 100%;
+    }
+   
+    &__top{
+        padding: 1.5rem 0;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       width: 100%;
+       @include respond(phone){
+        flex-direction: column;
+       }
+
+    }
+    &__bottom{
+        display: flex;
+        width: 100%;
+    }
+    &__logo-box{
+        display: inline-block;
+        @include respond(phone){
+            margin-bottom: 1.5rem;
+        }
+    }
+    &__logo{
+        @include respond(phone){
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+    &__icon{
+        &-section{
+            display: inline-block;
+            float: right;
+        }
+        &-list{
+            display: inline-block;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &-item{
+            display: inline-block;
+           
+            &:not(:last-child){
+                margin-right:2.5rem
+            }
+            &.navigation__icon{
+                display: none;
+                @include respond(phone){
+                    display: flex;
+                }
+            }
+        }
+        &-link{
+            @extend .disFlexCenter;
+            padding: 1rem;
+        }
+    }
+    .icon{
+        @include respond(phone){
+            width: 2.2rem;
+            height: 2.2rem;
+        }
+    }
+}
+
+

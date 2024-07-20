@@ -1,0 +1,194 @@
+.navigation{
+   @extend .disFlexCenter;
+   @include respond(phone){
+        position: relative;
+        @include respond(phone){
+            position: fixed;
+            width: 100%;
+            overflow-y: auto;
+            height: 100vh;
+            top: 0;
+            background: var(--color-white);
+            left: -100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            transition: all .8s cubic-bezier(0.86, 0, 0.07, 1);
+            -webkit-transition: all .8s cubic-bezier(0.86, 0, 0.07, 1);
+        }
+   }
+   &__nav{
+        @extend .disFlexCenter;
+       
+   }
+   &__list{
+        @extend .disFlexCenter;
+        list-style: none;
+        justify-content: space-between;
+        @include respond(phone){
+            flex-direction: column;
+        }
+   }
+   &__item{
+        display: inline-block;
+        @include respond(phone){
+            width: 100%;
+        }
+        
+   }
+   &__link{
+        &,
+        &:link,
+        &:visited{
+            display: inline-block;
+            padding: 2rem 1.5rem;
+            transition: .2s ease;
+            @include respond(phone){
+                width: 100%;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: 600;
+                letter-spacing: 0.2rem;
+            }
+            &:hover,
+            &:focus,
+            &:active{
+                text-decoration: none;
+                color:var(--color-primary);
+            }
+        }
+   }
+   &__item:first-child &__link{
+     padding-left: 0;
+   }
+   &__item:last-child &__link{
+    padding-right: 0;
+  }
+//    &__checkbox {
+//         display: none;
+//     }
+
+   &__button{
+        display: none;
+        @include respond(phone){
+            background-color: var(--color-black);
+            // height: 4rem;
+            // width: 4rem;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            // display: inline-block;
+            display: flex;
+            
+        }
+   }
+   
+//    &__background {
+//         @include respond(phone){
+//             height: 100%;
+//             width: 100%;
+//             position: fixed;
+//             top: 0rem;
+//             left: 0;
+//             background: rgba($color-dark,.5);
+//             z-index: -100;
+//             opacity: 0;
+//             transition: opacity .8s cubic-bezier(0.86, 0, 0.07, 1);
+//             visibility: hidden;
+//         }
+//     }
+    @include respond(phone){
+        //FUNCTIONALITY
+        // &__checkbox:checked ~ &__background {
+        //     opacity: 1;
+        //     visibility: visible;
+        // }
+
+        // &__checkbox:checked ~ &__nav {
+        //     opacity: 1;
+        //     left: 0;
+        // }
+
+        //ICON
+        &__icon {
+            position: relative;
+            // margin-top: 3.5rem;
+
+            &,
+            &::before,
+            &::after {
+                width: 2.5rem;
+                height: .2rem;
+                display: inline-block;
+                background-color: var(--color-dark);
+                
+            }
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                transition: all .2s;
+            }
+
+            &::before { top: -.8rem; }
+            &::after { top: .8rem; }
+        }
+
+        &__button:hover &__icon::before {
+            top: -1rem;
+        }
+
+        &__button:hover &__icon::after {
+            top: 1rem;
+        }
+        &__close{
+            
+            &::before,
+            &::after {
+                content: '';
+                width: 2.5rem;
+                height: 2px;
+                display: inline-block;
+                background-color: var(--color-dark);
+                position: absolute;
+                
+            }
+            &::before { 
+                transform: rotate(135deg);
+            }
+            &::after { 
+                transform: rotate(-135deg);
+            }
+        }
+
+        // &__checkbox:checked + &__button &__icon {
+        //     background-color: transparent;
+        // }
+
+        // &__checkbox:checked + &__button &__icon::before {
+        //     top: 0;
+        //     transform: rotate(135deg);
+        // }
+
+        // &__checkbox:checked + &__button &__icon::after {
+        //     top: 0;
+        //     transform: rotate(-135deg);
+        // }
+        .navigation__button{
+            position: absolute;
+            top: 4rem;
+            right: 4rem;
+        }
+    }
+
+}
+body{
+    &.menuActive{
+        .navigation{
+            left: 0;
+        }
+    }
+}

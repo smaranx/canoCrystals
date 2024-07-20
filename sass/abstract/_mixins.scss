@@ -1,0 +1,90 @@
+@mixin clearfix{
+    &::after{
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin absCenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+//media Query
+/*
+0 - 600px  Phone
+600 - 900 tablet protrait
+901 - 1200 tablet landscape
+[1201 - 1800] is where our normal styles apply
+1800 -  big desktop
+
+
+*/
+
+
+@mixin respond-phone{
+    @media (max-width:600px) {
+        @content;
+    }
+}
+/* 
+$breakpoint argument choices: 
+-phone
+-tab-port
+-tab-land
+-big-Desktop
+*/
+
+@mixin respond($breakpoint){
+    @if $breakpoint == big-desk{
+        @media (min-width:112.5em) {
+            @content;
+        }
+    }
+    
+    @if $breakpoint == tab-land{
+        @media (max-width:75em) { // 1200px
+            @content;
+        }
+    }
+    @if $breakpoint == tab-port{
+        @media (max-width:62.1875em) { // 995px 
+            @content;
+        }
+    }
+    @if $breakpoint == phone{
+        @media (max-width:47.93em) { //767
+            @content;
+        }
+    }
+    @if $breakpoint == phone-port{
+        @media (max-width:30em) { //480
+            @content;
+        }
+    }
+    
+}
+.disInlineblock{
+    display: inline-block;
+    width: 100%;
+}
+.disPlayInlineFlex{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.disFlexCenter{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.disFlexCen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

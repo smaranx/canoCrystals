@@ -1,0 +1,23 @@
+.notification{
+    @extend .disInlineblock;
+    
+    &__box{
+        @extend .disInlineblock;
+        background-color: var(--color-primary-bg);
+        color: var(--color-white);
+        text-align: center;
+        padding: 1rem 0;
+        &-text{
+            color: var(--color-white);
+        }
+        &-link{
+            font-family: 'Rota';
+            font-size: 1.4rem;
+            line-height: 1.736rem;
+            color: var(--color-white);
+            margin-left: 1.7rem;
+            text-decoration: underline;
+        }
+    }
+}
+

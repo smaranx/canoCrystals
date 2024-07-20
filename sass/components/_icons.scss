@@ -1,0 +1,33 @@
+.icon{
+    width: 1.8rem;
+    height: 1.8rem;
+    display: inline-block;
+
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    &_search{
+        background-image: url(../img/icons/search.svg);
+    }
+    &_cart{
+        background-image: url(../img/icons/cart.svg);
+    }
+    &_wishlist{
+        background-image: url(../img/icons/wishlist.svg);
+    }
+    &_user{
+        background-image: url(../img/icons/user.svg);
+    }
+    &_facebook{
+        background-image: url(../img/icons/facebook.svg);
+    }
+    &_linkedin{
+        background-image: url(../img/icons/linkedIn.svg);
+    }
+    &_twitter{
+        background-image: url(../img/icons/twitter.svg);
+    }
+    &_rightArrow{
+        background-image: url(../img/icons/rightArrow.svg);
+    }
+}

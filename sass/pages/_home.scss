@@ -1,0 +1,746 @@
+.category{
+    &__box{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        @include respond(phone){
+            flex-direction: column;
+        }
+    }
+    &__content{
+        width: 35%;
+        @include respond(phone){
+            width: 100%;
+            margin-bottom: 6rem;
+        }
+    }
+    &__title{
+        font-family: 'Rota';
+        font-size: 2.8rem;
+        font-weight: 700;
+        line-height: 3.4rem;
+
+        margin-bottom: 1.5rem;
+    }
+    &__text{
+        font-family: "Poppins", sans-serif;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2.4rem;
+
+        margin-bottom: 1.5rem;
+
+    }
+    &__link{
+        display: inline-block;
+    }
+    &__product{
+        width: 65%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: row;
+
+        @include respond(phone){
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__product-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        max-width: 25rem;
+        width: 100%;
+        
+        &:not(:last-child){
+            margin-right: 2rem;
+            @include respond(phone){
+                margin-bottom: 4rem;
+                margin-right: 0;
+            }
+        }
+
+        @include respond(phone){
+            width: 100%;
+            max-width: 100%;
+            
+        }
+        
+    }
+    
+    &__product-img{
+        width: 100%;
+        margin-bottom: 1.2rem;
+    }
+    &__product-price,
+    &__product-text{
+        font-family: 'Rota';
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 2.4rem;
+        text-align: left;
+
+    }
+    &__product-price{
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
+}
+
+.section{
+    &__diamond{
+        
+        &:not(:last-child){
+            margin-bottom: 20rem;
+            @include respond(phone){
+                margin-bottom: 10rem;
+            }
+        }
+        display: inline-block;
+        width: 100%;
+    }
+    &__dreamFetaure{
+        margin-bottom: 6.4rem;
+    }
+    &__shopbyshape{
+        background: #7D6C64;
+        text-align: center;
+        padding: 4rem 0;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+    &__crownjewels{
+        .paratext-l{
+            color: #555555;
+        }
+    }
+    &__crownjewels &__titleBlock{
+        align-items: center;
+    }
+    &__education{
+        &-home{
+            background-image: url(../img/fineJewellery/fj_sec7_img1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+            background-attachment: fixed;
+            padding: 10rem 0;
+
+            max-width: 192rem;
+            width: 100%;
+            margin: 0 auto;
+            display: block;
+
+            @include respond(phone){
+                .container [class^="col-"]{
+                    margin-bottom: 6rem;
+                }
+            }
+        }
+    }
+    &__canocrystals{
+        .section__title{
+            font-family: 'Rota';
+            font-size: 3.2rem;
+            font-weight: 600;
+            line-height: 4rem;
+
+            color: #000;
+
+        }
+        .box__content-iconBox--icon{
+            background: #7D6C64;
+
+        }
+    }
+    &__commitment{
+        .banner{
+            &__title{
+                font-family: "Inter", sans-serif;
+                font-size: 3rem;
+                font-weight: 500;
+                line-height: 3.6rem;
+                text-align: left;
+                margin-bottom: 1.3rem;
+                color: #fff;
+            }
+            &__text{
+                font-family: "Inter", sans-serif;
+                font-size: 1.6rem;
+                font-weight: 400;
+                line-height: 2.2rem;
+                text-align: left;
+
+                margin-bottom: 2.5rem;
+
+            }
+            &__link{
+                font-family: "Poppins", sans-serif;
+                font-size: 2.4rem;
+                font-weight: 500;
+                line-height: 3.6rem;
+                text-align: left;
+
+                &:hover,
+                &:active,
+                &:focus{
+                    text-decoration: none;
+                }
+
+            }
+        }
+    }
+    &__faq{
+        margin-bottom: 8rem;
+        .section__title{
+            font-family: "Inter", sans-serif;
+            font-size: 5rem;
+            font-weight: 500;
+            line-height: 6rem;
+        }
+    }
+}
+.dream{
+    &__block{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+
+        border: 1px solid #CDB7AA;
+        margin-bottom: 14rem;
+
+        @include respond(phone){
+            flex-direction: column;
+            margin-bottom: 8rem;
+        }
+        &-imgCol{
+            width: 45%;
+            position: relative;
+            @include respond(tab-land){
+                width: 50%;
+            }
+
+            @include respond(phone){
+                width: 100%;
+            }
+            img{
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translate(0,-50%);
+                -webkit-transform: translate(0,-50%);
+                // width: 100%;
+                @include respond(tab-land){
+                    width: 50rem;
+                }
+                @include respond(phone){
+                    position: relative;
+                    width: 100%;
+                    transform: translate(0,0%);
+                    -webkit-transform: translate(0,0%);  
+                    vertical-align: top; 
+                }
+            }
+        }
+        &-content{
+            width: 55%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            @include respond(tab-land){
+                width: 50%;
+            }
+            @include respond(phone){
+                width: 100%;
+            }
+            &-box{
+                max-width: 46rem;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-direction: column;
+
+                padding: 12rem 0;
+                @include respond(tab-port){
+                    max-width: 30rem;
+                }
+                @include respond(phone){
+                    max-width: 100%;
+                    padding: 6rem 3rem;
+                }
+            }
+        }
+        &-title{
+            font-family: "Inter", sans-serif;
+            font-size: 4rem;
+            font-weight: 500;
+            line-height: 4.8rem;
+
+            margin-bottom: 2.4rem;
+
+            color: #5A4A42;
+
+        }
+        &-text{
+
+            font-family: "Poppins", sans-serif;
+            font-size: 1.8rem;
+            font-weight: 300;
+            line-height: 2.7rem;
+            text-align: left;
+
+
+            margin-bottom: 4rem;
+        }
+        &.right &-imgCol{
+            img{
+                right: 0;
+                left: auto;
+            }
+        }
+        &.right{
+            @include respond(phone){
+                flex-direction: column-reverse;
+            }
+        }
+    }
+}
+
+.shopbylist{
+    &__block{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    &__title{
+        font-family: 'Rota';
+        font-size: 3.2rem;
+        font-weight: 600;
+        line-height: 4rem;
+
+        color: #fff;
+        margin-bottom: 4rem;
+
+    }
+    &__list{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        @include respond(tab-port){
+            flex-wrap: wrap;
+        }
+    }
+}
+.shopbyshape{
+    &__name{
+        font-family: "Poppins", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 300;
+        line-height: 2.7rem;
+        color: #fff;
+    }
+    &__item{
+        width: calc(100% / 10);
+        display: flex;
+        flex-direction: column;
+        @include respond(tab-port){
+            width: calc(100% / 5);
+            margin-bottom: 4rem;
+        }
+        @include respond(phone){
+            width: calc(100% / 2);
+        }
+    }
+    &__link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        scale: 1;
+        transition: all .25s ease-in-out;
+        &:hover{
+            text-decoration: none;
+            scale: 1.15;
+        }
+    }
+    &__img{
+        width: 10rem;
+    }
+}
+
+.crownjewel{
+    &__block{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        flex-direction: column;
+    }
+    &__box{
+        display: inline-block;
+        position: relative;
+
+        @include respond(phone){
+            width: 100%;
+        }
+    }
+    &__imgbox,
+    &__picture{
+        display: inline-block;
+        @include respond(phone){
+            width: 100%;
+        }
+    }
+    &__img{
+        vertical-align: top;
+        width: 100%;
+    }
+    &__content{
+        max-width: 32rem;
+        width: 100%;
+        position: absolute;
+        background: rgba(205, 183, 170, 0.741);
+        padding: 5rem 3rem;
+        top: 7.4rem;
+        right: -13.9rem;
+
+        @include respond(phone){
+            top: auto;
+            bottom: 0;
+            right: 0;
+        }
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    &__title{
+        font-family: "Inter", sans-serif;
+        font-size: 2.2rem;
+        font-weight: 400;
+        line-height: 2.6rem;
+
+        margin-bottom: 2rem;
+        &.white{
+            color: #fff;
+        }
+
+    }
+    &__text{
+        font-family: "Inter", sans-serif;
+        font-size: 1.7rem;
+        font-weight: 400;
+        line-height: 2.2rem;
+        &.white{
+            color: #fff;
+        }
+    }
+    &__box--2{
+        float: right;
+        align-self: flex-end;
+        transform: translateY(-10rem);
+        -webkit-transform: translateY(-10rem);
+        @include respond(tab-port){
+            transform: translateY(0rem);
+            -webkit-transform: translateY(0rem);
+        }
+    }
+    &__box--2 &__content{
+        right: auto;
+        left: -13.9rem;
+        top: auto;
+        bottom: 5rem;
+        @include respond(phone){
+            left: 0;
+            bottom: 0;
+        }
+    }
+    &__box--3{
+        transform: translateY(-10rem);
+        -webkit-transform: translateY(-10rem);
+        @include respond(tab-port){
+            transform: translateY(0rem);
+            -webkit-transform: translateY(0rem);
+        }
+    }
+    &__box--3 &__content{
+        right: auto;
+        left: -1rem;
+        top: auto;
+        bottom: 2rem;
+        @include respond(tab-port){
+            left: -1rem;
+        }
+        @include respond(phone){
+            left: 0;
+            bottom: 0;
+        }
+    }
+}
+
+.education{
+    &__box-home &__link{
+        &,
+        &:link,
+        &:visited{
+            color: #5A4A42;
+            &:hover,
+            &:active,
+            &:focus{
+                text-decoration: none;
+            }
+        }
+    }
+    &__box{
+        &-title{
+            font-family: "Inter", sans-serif;
+            font-size: 4rem;
+            font-weight: 500;
+            line-height: 4.8rem;
+            color: #5A4A42;
+
+            margin-bottom: 4.2rem;
+        }
+    }
+}
+.maker{
+    &__block{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+    }
+    &__content{
+        display: flex;
+        width: 100%;
+        margin-bottom: 4rem;
+
+        @include respond(phone){
+            flex-direction: column;
+        }
+    }
+    &__title{
+        font-family: "Inter", sans-serif;
+        font-size:4.5rem;
+        font-weight: 500;
+        line-height: 5.4rem;
+        color: #5A4A42;
+
+    }
+    &__text{
+        font-family: "Inter", sans-serif;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2.2rem;
+        color: #1E1E1E;
+
+
+    }
+}
+.Question{
+    &__block{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6rem 0;
+        background: #E9D8D1;
+        flex-direction: column;
+        @include respond(tab-port){
+            padding: 6rem 4rem;
+        }
+    }
+    &__title{
+        font-family: "Inter", sans-serif;
+        font-size: 3.2rem;
+        font-weight: 500;
+        line-height: 3.8rem;
+        color: #000;
+        @include respond(tab-port){
+           text-align: center;
+        }
+
+        margin-bottom: 4rem;
+
+    }
+
+    &__contact{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row;
+        max-width: 30rem;
+        width: 100%;
+        margin-bottom: 6rem;
+        & > *{
+            &,
+            &:link,
+            &:visited{
+                font-family: "Inter", sans-serif;
+                font-size: 1.6rem;
+                font-weight: 400;
+                line-height: 2rem;
+                color: #000;
+            }
+        }
+    }
+    &__lists{
+        list-style: none;
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    &__item{
+       
+        display: inline-block;
+        width: 100%;
+        border-bottom: 1px solid #9C9C9C;
+        
+    } 
+    &__links{
+        &,
+        &:link,
+        &:visited{
+            display: inline-block;
+            width: 100%;
+            padding: 2rem 0;
+
+            padding-right: 4rem;
+
+            font-family: "Inter", sans-serif;
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 2.4rem;
+            text-align: left;
+
+            color: #333;
+            position: relative;
+
+            &::after{   
+                content: '';
+
+                width: 3.2rem;
+                height: 3.2rem;
+                background-image: url(../img/icons/plus.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 1.8rem 1.8rem;
+
+                position: absolute;
+                top: 50%;
+                transform: translate(0%,-50%);
+                right: 0;
+
+                transition: all .25s ease-in-out;
+                -webkit-transition: all .25s ease-in-out;
+            }
+
+            &:hover,
+            &:active,
+            &:focus{
+                text-decoration: none;
+            }
+
+        }
+        &.active{
+            &,
+            &:link,
+            &:visited{
+                &:after{
+                    transform: rotate(45deg);
+                    top: 25%;
+                }
+            }
+        }
+
+    }
+    &__ans{
+        display: none;
+        font-family: "Inter", sans-serif;
+        font-size: 1.7rem;
+        font-weight: 400;
+        line-height: 2.2rem;
+        margin-bottom: 2rem;
+    }
+    &__links.active + &__ans{
+        display: block;
+    }
+}
+.book{
+    &__appointment2{
+        background-image: linear-gradient(
+        to right bottom,
+        rgba(189, 201, 189, 0.788),
+        rgba(189, 201, 189, 0.788)),
+    url(../img/fineJewellery/fj_sec12_img1.jpg);
+        // background-image: url(../img/fineJewellery/fj_sec12_img1.jpg), linear-gradient(rgba(189, 201, 189, 0.788));
+        background-color: rgba(189, 201, 189, 0.788);
+
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 4.7rem 8.7rem;
+        @include respond(tab-port){
+            padding: 4.6rem 3rem;
+        }
+        @include respond(phone){
+            flex-direction: column;
+        }
+    }
+}
+.appoinment{
+    &__info{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        @include respond(phone){
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+    }
+    &__block{
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        justify-content: space-between;
+        @include respond(tab-port){
+            flex-direction: column;
+        }
+        @include respond(phone){
+            width: 100%;
+        }
+    }
+    &__contact{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+        @include respond(tab-port){
+            margin-bottom: 1rem;
+        }
+    }
+}
