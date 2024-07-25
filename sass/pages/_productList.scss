@@ -20,6 +20,14 @@
     }
 }
 .filter{
+    &__section{
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        display: none;
+    }
     &__list,
     &__block{
         display: flex;
@@ -29,16 +37,24 @@
     }   
     &__block{
         flex-direction: column;
+        &.row{
+            flex-direction: row;
+            justify-content: space-between;
+            @include respond(phone){
+                flex-direction: column;
+            }
+        }
     }
     &__list{
         justify-content: center;
         flex-wrap: wrap;
-        margin-bottom: 2.6rem;
+        margin-bottom: 3.6rem;
         align-items: center;
-        @include respond(tab-port){
+        @include respond(phone){
             justify-content: flex-start;
         }
     }
+    
     &__head{
         font-family: "Inter", sans-serif;
         font-size: 1.6rem;
@@ -55,6 +71,13 @@
         @include respond(phone){
             justify-content: flex-start;
         }
+    }
+    &__items{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        flex-wrap: wrap;
     }
     &__item{
         margin-bottom: 1.2rem;
@@ -150,39 +173,45 @@
         }
         &.round{
             background-image: url(../img/icons/round.svg);
-            width: 20px;
-            height: 20px;
+            width: 25px;
+            height: 25px;
+            background-size: auto 100%;
         }
         &.cushion_cut{
             background-image: url(../img/icons/cushion_cut.svg);
-            width: 20px;
-            height: 20px;
+            width: 25px;
+            height: 25px;
+            background-size: auto 100%;
         }
         &.pear_shaped{
             background-image: url(../img/icons/pear_shaped.svg);
-            width: 20px;
-            height: 20px;
+            width: 25px;
+            height: 25px;
+            background-size: auto 100%;
         }
         &.oval{
             background-image: url(../img/icons/oval.svg);
-            width: 20px;
-            height: 20px;
+            width: 25px;
+            height: 25px;
+            background-size: auto 100%;
         }
-        
         &.princess_cut{
             background-image: url(../img/icons/princess_cut.svg);
-            width: 20px;
-            height: 20px;
+            width: 25px;
+            height: 25px;
+            background-size: auto 100%;
         }
         &.emerald_cut{
             background-image: url(../img/icons/emerald_cut.svg);
             width: 25px;
             height: 25px;
+            background-size: auto 100%;
         }
         &.baguette{
             background-image: url(../img/icons/baguette.svg);
             width: 25px;
-            height: 33px;
+            height: 25px;
+            background-size: auto 100%;
         }
         
     }
@@ -194,7 +223,80 @@
             font-size: 1.6rem;
             font-weight: 400;
             line-height: 2.2rem;
+            color: #555555;
+
         }
+    }
+    &__links:hover{
+        &,
+        &:link,
+        &:visited{
+            text-decoration: none;
+        }
+    }
+    &__links:hover &__text{
+        color: var(--color-primary);
+        text-decoration: none;
+
+    }
+    &__block.row &__head,
+    &__block.row &__list{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    &__list.column{
+        &:not(:last-child){
+            padding-right: 10rem;
+            padding-left: 10rem;
+            @include respond(tab-port){
+                padding-right: 5rem;
+                padding-left: 5rem;
+            }
+        }
+        &:last-child{
+            padding-left: 10rem;
+            @include respond(tab-port){
+                padding-left: 5rem;
+            }
+            @include respond(phone){
+                padding-left: 0;
+            }
+        }
+         &:first-child{
+            padding-left: 0;
+            @include respond(tab-port){
+                padding-left: 0;
+            }
+        }
+    }
+    &__list.column &__links{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+    }
+    &__list.column &__item{
+        margin-bottom: 2rem;
+        &:not(:last-child){
+            margin-right: 2rem;
+        }
+    }
+    &__list.column &__icon{
+        margin-right: 0;
+    }
+    &__list.column &__icon.round_icons{
+        margin: .25rem 0;
+    }
+    &__list.column &__text{
+        font-size: 1.2rem;
+    }
+    &__list.shape &__item{
+        width: 5rem;
+        height: 5rem;
+    }
+    &__list.metal &__item{
+        // width: 5rem;
+        // height: 5rem;
     }
 }
 .product{
@@ -321,7 +423,10 @@
         }
         @include respond(tab-port){
             grid-template-columns: repeat(3, 1fr);
-            grid-gap: 8rem;
+            grid-gap: 4rem;
+            justify-content: space-between;
+            display: flex;
+            flex-wrap: wrap;
         }
         @include respond(phone){
             grid-template-columns: repeat(1, 1fr);
@@ -350,8 +455,14 @@
                 
         //     }
         // }
-
         @include respond(tab-port){
+            
+            max-width: 27rem;
+        }
+        @include respond(phone){
+            max-width: 49%;
+        }
+        @include respond(phone-port){
             max-width: 100%;
             width: 100%;
         }
@@ -410,14 +521,15 @@
         align-items: center;
         margin-bottom: 1.6rem;
         flex-direction: row;
-        margin-right: 3rem;
+        // margin-right: 3rem;
         &-title{
             font-family: "Inter", sans-serif;
             font-size: 1.6rem;
             font-weight: 500;
             line-height: 2.2rem;
             text-align: left;
-            margin-right: 3rem;
+            // margin-right: 3rem;
+            width: 6.8rem;
         }
         &-content{
             display: flex;
@@ -430,13 +542,15 @@
             font-weight: 500;
             line-height: 1.7rem;
             text-align: left;
+            
 
         }
         &-item{
             &.carat{
                 width: 5.4rem;
                 height: 3rem;
-                border: 1px solid #626262;
+                border: 1px solid transparent;
+                border-radius: .4rem;
                 background: #fff;
 
                 font-family: "Poppins", sans-serif;
@@ -448,9 +562,8 @@
                 justify-content: center;
                 align-items: center;
 
-                &:not(:last-child){
                     margin-right: 1rem;
-                }
+                
                 &:hover,
                 &.active{
                     background: #E7E1DC;
@@ -458,13 +571,14 @@
                     cursor: pointer;
                 }
             }
-            &.metal{
-                width: 2rem;
-                height: 2rem;
+            .metal{
+                width: 3rem;
+                height: 3rem;
                 border-radius: 50%;
-                &:not(:last-child){
-                    margin-right: 1.5rem;
-                }
+                display: inline-block;
+                border: 0.4rem solid #fff;
+                outline: 1px solid transparent;
+                
                 &.silver{
                     background: #E1E1E1;
                 }
@@ -475,14 +589,15 @@
                     background: #D59C9A;
                 }
                 &.platium{
-                    width: 2.2rem;
-                    height: 2.2rem;
+                    // width: 2.2rem;
+                    // height: 2.2rem;
                     background: #E1E1E1;
                     font-family: "Inter", sans-serif;
                     font-size: 1.2rem;
                     font-weight: 400;
                     line-height: 1.2rem;
                     text-align: center;
+                    font-style: normal;
 
                     border-radius: 50%;
 
@@ -494,13 +609,14 @@
 
                     }
                 }
+                &:hover,
                 &.active{
                     position: relative;
                     width: 3rem;
                     height: 3rem;
                     border: 0.4rem solid #fff;
                     outline: 1px solid #686868;
-                     
+                     cursor: pointer;
                 }
             }
             &.shape{
@@ -510,6 +626,8 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                border: 1px solid transparent;
+                border-radius: .4rem;
                 &:not(:last-child){
                     margin-right: .5rem;
                 }
@@ -544,5 +662,46 @@
 
         margin-bottom: 2rem;
 
+    }
+}
+
+.productFilter__Slider{
+    width: 70%;
+    .slick-list{
+        width: 100%;
+    }
+    .product__info-item{
+        margin: 2px 0;
+    }
+    .slick-track,
+    .product__info-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .slick-list{
+        overflow-y: visible;
+    }
+    .slick-prev{
+        left: -2rem;
+        &::before{
+            background-image: url(../img/icons/arrow_right_black.svg);
+        }
+    }
+    .slick-next{
+        right: -2rem;
+        &::before{
+            background-image: url(../img/icons/arrow_left_black.svg);
+        }
+    }
+    .slick-arrow{
+        &::before{
+            background-size: 1rem 1rem;
+            background-position: center;
+        }
+        &.slick-disabled{
+            display: none;
+            pointer-events: none;
+        }
     }
 }

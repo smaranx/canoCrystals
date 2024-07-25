@@ -85,3 +85,39 @@ $(".thumb__slider").slick({
     },
   ],
 });
+
+$(".productFilter__Slider.metal").slick({
+  dots: false,
+  infinite: false,
+  arrows: true,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+});
+
+$(".productFilter__Slider.shape, .productFilter__Slider.carat").slick({
+  dots: false,
+  infinite: false,
+  arrows: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+});
+
+$(".product__filter-link").click(function () {
+  if (!$(this).hasClass("active")) {
+    $(".filter__section").slideDown();
+    $(this).addClass("active");
+  } else {
+    $(".filter__section").slideUp();
+    $(this).removeClass("active");
+  }
+});
+
+$(".nav__sub").click(function () {
+  if (!$(this).hasClass("active")) {
+    $(this).next().slideDown("slow");
+    $(this).addClass("active");
+  } else {
+    $(this).next().slideUp("slow");
+    $(this).removeClass("active");
+  }
+});
