@@ -331,6 +331,151 @@ textarea {
   font: inherit;
   /* 2 */ }
 
+
+
+
+  /*
+  Login
+  */
+  .work{
+    display: flex;
+    width:90vw;
+    margin:auto;
+    gap:1rem;
+  }
+  .text{
+   
+    flex-basis:50%;
+    }
+  
+  .text2{
+    
+    flex-basis:50%;
+  }
+  
+  img{
+    width:100%;
+    object-fit:cover;
+  }
+  @media (max-width:600px){
+    .work{
+      flex-direction:column;
+    }
+    .text{
+      display: flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+    }
+  }
+
+ 
+
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 36px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #E1DBD6;
+    color: #5A4A42;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }  
+
+
+  .name-fields {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.field {
+    width: 48%;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.field input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit-field {
+    text-align: center;
+}
+
+.submit-field button {
+    background-color: #E1DBD6;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.terms-field {
+  margin: 10px 0;
+  text-align: left;
+  font-size: 14px;
+}
+
+.terms-field input[type="checkbox"] {
+  margin-right: 5px;
+  vertical-align: middle; /* Aligns checkbox with text */
+}
+
+.terms-field label {
+  display: inline;
+}
+
+.terms-field a {
+
+  text-decoration: none;
+}
+
+.terms-field a:hover {
+  text-decoration: underline;
+}
+
+
+
+.content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 800px;
+}
+
+.paragraph {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.paragraph:last-of-type {
+  margin-bottom: 0;
+}
+  /*
+  Login end
+  */
 /* Interactive
     ========================================================================== */
 /*
@@ -3914,3 +4059,143 @@ input {
     line-height: 2rem;
     text-align: center;
     color: #050505; }
+
+
+
+    /*
+    cart
+    
+    */
+    .container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 20px auto;
+  }
+  
+  .cart-items {
+      flex: 7;
+      background-color: #fff;
+      padding: 20px;
+      margin-right: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow-y: auto; /* Allows scrolling if content overflows */
+  }
+  
+  .cart-items h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
+  }
+  
+  .select-all {
+      margin-bottom: 20px;
+  }
+  
+  .select-all input[type="checkbox"] {
+      margin-right: 10px;
+  }
+  
+  .cart-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+  }
+  
+  .item-image {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      margin-right: 15px;
+  }
+  
+  .item-details {
+      flex: 1;
+  }
+  
+  .item-description {
+      font-size: 16px;
+      margin: 0 0 5px;
+  }
+  
+  .item-price {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0 0 5px;
+  }
+  
+  .item-quantity {
+      width: 60px;
+      margin-right: 10px;
+  }
+  
+  .remove-button {
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+  }
+  
+  .remove-button:hover {
+      background-color: #e60000;
+  }
+  
+  .order-summary {
+      flex: 3;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order-summary h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
+  }
+  
+  .summary-field {
+      margin-bottom: 15px;
+  }
+  
+  .summary-field label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+  }
+  
+  .summary-field input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+  }
+  
+  .summary-field p {
+      margin: 5px 0;
+      font-size: 16px;
+  }
+  
+  .amount {
+      font-weight: bold;
+  }
+  
+  .proceed-button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+  }
+  
+  .proceed-button:hover {
+      background-color: #45a049;
+  }
