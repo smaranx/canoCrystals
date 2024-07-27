@@ -4066,21 +4066,14 @@ input {
     cart
     
     */
-    .container {
-      display: flex;
-      justify-content: space-between;
-      max-width: 1200px;
-      margin: 20px auto;
-  }
-  
+   
   .cart-items {
       flex: 7;
       background-color: #fff;
-      padding: 20px;
+      padding: 30px;
       margin-right: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      overflow-y: auto; /* Allows scrolling if content overflows */
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
   
   .cart-items h2 {
@@ -4095,14 +4088,24 @@ input {
   
   .select-all input[type="checkbox"] {
       margin-right: 10px;
+      transform: scale(1.5);
   }
   
   .cart-item {
       display: flex;
       align-items: center;
-      margin-bottom: 15px;
-      padding: 10px;
-      border-bottom: 1px solid #ddd;
+      margin-bottom: 20px;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+  }
+  
+  .cart-item:last-child {
+      border-bottom: none;
+  }
+  
+  .item-checkbox {
+      margin-right: 15px;
+      transform: scale(1.5);
   }
   
   .item-image {
@@ -4110,26 +4113,37 @@ input {
       height: 80px;
       object-fit: cover;
       margin-right: 15px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
   }
   
   .item-details {
       flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
   }
   
   .item-description {
       font-size: 16px;
-      margin: 0 0 5px;
+      color: #555;
+      margin: 0;
   }
   
   .item-price {
       font-size: 18px;
       font-weight: bold;
-      margin: 0 0 5px;
+      color: #333;
+      margin: 0;
   }
   
   .item-quantity {
       width: 60px;
-      margin-right: 10px;
+      margin-right: 20px;
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      text-align: center;
   }
   
   .remove-button {
@@ -4137,8 +4151,9 @@ input {
       color: white;
       border: none;
       padding: 5px 10px;
-      border-radius: 4px;
+      border-radius: 5px;
       cursor: pointer;
+      font-size: 14px;
   }
   
   .remove-button:hover {
@@ -4148,9 +4163,9 @@ input {
   .order-summary {
       flex: 3;
       background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
   
   .order-summary h2 {
@@ -4160,42 +4175,49 @@ input {
   }
   
   .summary-field {
-      margin-bottom: 15px;
+      margin-bottom: 20px;
   }
   
   .summary-field label {
       display: block;
       margin-bottom: 5px;
       font-weight: bold;
+      font-size: 16px;
   }
   
   .summary-field input[type="text"] {
       width: 100%;
       padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
       box-sizing: border-box;
+      font-size: 16px;
   }
   
   .summary-field p {
       margin: 5px 0;
       font-size: 16px;
+      color: #555;
   }
   
   .amount {
       font-weight: bold;
+      color: #333;
   }
   
   .proceed-button {
       background-color: #4CAF50;
       color: white;
-      padding: 10px;
+      padding: 15px;
       border: none;
-      border-radius: 4px;
+      border-radius: 5px;
       cursor: pointer;
       width: 100%;
+      font-size: 16px;
+      font-weight: bold;
   }
   
   .proceed-button:hover {
       background-color: #45a049;
   }
+  
