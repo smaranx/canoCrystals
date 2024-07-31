@@ -353,10 +353,15 @@ textarea {
     flex-basis:50%;
   }
   
-  img{
+  /*img{
     width:100%;
     object-fit:cover;
   }
+  .img1{
+    width: auto !important;
+    object-fit: cover;
+  }*/
+
   @media (max-width:600px){
     .work{
       flex-direction:column;
@@ -367,6 +372,7 @@ textarea {
       align-items:center;
       flex-direction:column;
     }
+    
   }
 
  
@@ -393,6 +399,7 @@ textarea {
 
   .name-fields {
     display: flex;
+    flex-wrap: wrap;  
     justify-content: space-between;
     margin-bottom: 10px;
 }
@@ -550,7 +557,10 @@ a:visited {
     .main {
       margin-top: 0; } }
   .main--noTopback {
-    margin-top: 0; }
+    margin-top: 0;
+    overflow-x: hidden !important;
+  
+  }
 
 @media (max-width: 47.93em) {
   .section .container [class^="col-"] {
@@ -2133,7 +2143,7 @@ input {
   width: 100%; }
   @media (max-width: 62.1875em) {
     .shopbylist__list {
-      flex-wrap: wrap; } }
+      /*flex-wrap: wrap;*/ } }
 
 .shopbyshape__name {
   font-family: "Poppins", sans-serif;
@@ -3494,7 +3504,11 @@ input {
     @media (max-width: 47.93em) {
       .arrow__text-big {
         font-size: 1.4rem;
-        line-height: 1.6rem; } }
+        line-height: 1.6rem; }
+      
+       
+      
+      }
 
 .arrow__icon {
   border-radius: 4px;
@@ -4099,7 +4113,13 @@ input {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   border: 1px solid #ddd;
 }
-
+@media only screen and (max-width: 600px) {
+  .checkout-card {
+    width: 300px;
+    margin-left: 0px;
+    margin: 24px 0px;
+  }
+}
 .coupon {
   margin-bottom: 20px;
 }
@@ -4454,7 +4474,41 @@ body {
   white-space: nowrap;
   margin-right: 24px;
 }
+@media only screen and (max-width: 600px) {
+  .card1 {
+    width: 300px;
+    margin-left: 0px;
+    margin-right: 12px;
+  }
+  .card-imgage{
+    width: 36px !important;
+    height: 36px !important;
 
+  }
+  .education__box{
+    margin: 20px 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  
+  .card-image{
+     width: 90px !important;
+     height: 90px !important;
+    object-fit: cover;
+
+  }
+  .card-content1{
+    display: flex;
+  flex-wrap: wrap;
+    padding: 6px !important;
+  }
+  .card-content{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+}
 .card2{
   display: flex;
   width: 100%;
@@ -4480,7 +4534,7 @@ card-image1 {
 }
 
 .card-content {
-    display: flex;
+  display: flex;
     flex-direction: row;
     padding: 20px;
     flex: 1;
@@ -4500,7 +4554,7 @@ card-image1 {
 }
 
 .col-2-of-2 {
-    flex: 1;
+  
     display: flex;
     align-items: left;
     justify-content: left;
