@@ -373,7 +373,7 @@ textarea {
 
   input[type=text], input[type=password] {
     width: 100%;
-    padding: 12px 36px;
+  
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
@@ -413,6 +413,8 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    font-size: 14px !important;
+    text-align: left !important;
 }
 
 .submit-field {
@@ -438,6 +440,8 @@ textarea {
 .terms-field input[type="checkbox"] {
   margin-right: 5px;
   vertical-align: middle; /* Aligns checkbox with text */
+  width: 24px;
+  height: 24px;
 }
 
 .terms-field label {
@@ -862,7 +866,7 @@ body {
         position: absolute;
         top: 0;
         left: 0;
-        content: "•";
+        /*content: "•";*/
         width: 2rem;
         height: 2rem;
         font-family: "slick";
@@ -1093,6 +1097,7 @@ button {
   line-height: 1.7rem;
   border: 0;
   height: 4rem;
+  margin: 0px !important;
   vertical-align: top;
   text-transform: capitalize;
   text-align: center; }
@@ -1381,7 +1386,7 @@ input {
     background: #fff;
     vertical-align: top;
     margin-top: 1rem; }
-  .banner__slider .slick-dots {
+  .banner__slider  {
     text-align: left; }
     .banner__slider .slick-dots li {
       width: 2.8rem;
@@ -3206,7 +3211,14 @@ input {
       background-image: url(../img/icons/arrow_left_black.svg); }
   .productFilter__Slider .slick-arrow::before {
     background-size: 1rem 1rem;
-    background-position: center; }
+    background-position: center;
+    /*margin-top: -15px !important;*/
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+
+  
+  }
   .productFilter__Slider .slick-arrow.slick-disabled {
     display: none;
     pointer-events: none; }
@@ -4314,7 +4326,8 @@ body {
 		input{
 		
       text-align: center;
-      font-size: 26px;
+      font-size: 14px;
+      text-align: left !important;
 			border:1px solid #ddd;
 			border-radius:4px;
       display: inline-block;
