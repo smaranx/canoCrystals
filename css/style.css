@@ -4060,12 +4060,166 @@ input {
     text-align: center;
     color: #050505; }
 
+/*checkout columm*/
 
+.checkout-card {
+  width: 400px;
+  padding: 20px;
+  margin-left: 160px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+.coupon {
+  margin-bottom: 20px;
+}
+
+.coupon input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.coupon input::placeholder {
+  color: #545454;
+  text-align: left;
+}
+
+.pricing {
+  margin-bottom: 20px;
+}
+
+.pricing-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.pricing-item:last-child {
+  border-bottom: none;
+}
+
+.cta-button1 {
+  display: block;
+  width: 100%;
+  padding: 10px 40px !important;
+  text-align: center;
+  background-color: #E1DBD6;
+  color: black;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+/*payment */
+/*counter*/
+input,
+textarea {
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  margin: 0;
+  outline: none;
+  padding: 10px;
+}
+
+input[type="button"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.input-group {
+  clear: both;
+  margin: 0px 0;
+  position: relative;
+}
+
+.input-group input[type='button'] {
+  background-color: #eeeeee;
+  min-width: 38px;
+  width: auto;
+  transition: all 300ms ease;
+}
+
+.input-group .button-minus,
+.input-group .button-plus {
+
+  height: 38px;
+  padding: 0;
+  width: 38px;
+  position: relative;
+}
+
+.input-group .quantity-field {
+  position: relative;
+  height: 38px;
+  left: -6px;
+  text-align: center;
+  width: 62px;
+  display: inline-block;
+  font-size: 13px;
+  margin: 0 0 0px;
+  resize: vertical;
+}
+
+.button-plus {
+  left: -13px;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+}
 
     /*
     Side bar
     
     */
+
+    span {cursor:pointer; }
+		.number{
+			margin:100px;
+		}
+		.minus, .plus{
+			width:20px;
+			height:20px;
+			background:#f2f2f2;
+			border-radius:4px;
+			padding: 16px 0px;
+			border:1px solid #ddd;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+		}
+		input{
+		
+      text-align: center;
+      font-size: 26px;
+			border:1px solid #ddd;
+			border-radius:4px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+
+
+
+
     .dis1{
       background-color:  #B9AA99;  
     }
@@ -4078,7 +4232,17 @@ input {
   }
   
 
+  .card-checkbox {
+    width: 20%;
+}
 
+.close {
+  cursor: pointer;
+  background-color: #f1f1f1;
+  padding: 4px 9px;
+  align-items: center;
+  transform: translate(0%, -50%);
+}
 
 
     .container1 {
@@ -4173,7 +4337,6 @@ card-image1 {
 .card-content1 {
   display: flex;
   flex-direction: row;
-  margin-left: 36px;
   padding: 20px;
   flex: 1;
   align-items: flex-start;
@@ -4210,7 +4373,7 @@ card-image1 {
     background-color: #E1DBD6;
     color: #5A4A42;
     text-align: center;
-    padding: 10px 24px;
+    padding: 5px 12px;
     text-decoration: none;
     border-radius: 4px;
     font-size: 14px;
