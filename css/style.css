@@ -4066,6 +4066,21 @@ input {
     Side bar
     
     */
+    .dis1{
+      background-color:  #B9AA99;  
+    }
+
+  .mainCont{
+    background-color: white;
+    color: black;
+    padding: 24px 36px;
+    text-align: center;
+  }
+  
+
+
+
+
     .container1 {
       display: flex;
       justify-content: left;
