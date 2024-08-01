@@ -1511,7 +1511,11 @@ input {
     @media (max-width: 47.93em) {
       .banner__side .banner__textContent--side {
         max-width: 100%;
-        padding: 6rem 0; } }
+        padding: 6rem 0; } 
+    
+      
+      
+      }
   .banner__title--primary {
     font-family: "Inter", sans-serif;
     font-size: 4.5rem;
@@ -4526,6 +4530,7 @@ body {
   }
   .card-content1{
     display: flex;
+    flex-direction: column;
   flex-wrap: wrap;
    
   }
@@ -4580,7 +4585,7 @@ card-image1 {
 
 .card-content {
   display: flex;
-    flex-direction: row;
+  flex-direction: column;
     padding: 20px;
     flex: 1;
     align-items: flex-start;
