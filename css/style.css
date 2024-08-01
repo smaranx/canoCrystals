@@ -403,9 +403,18 @@ textarea {
     justify-content: space-between;
     margin-bottom: 10px;
 }
+.name-fields1 {
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
 
 .field {
     width: 48%;
+}
+.field1 {
+  width: 48%;
 }
 
 .field label {
@@ -567,7 +576,12 @@ a:visited {
     width: 100%;
     margin: 0; }
     .section .container [class^="col-"]:not(:last-child) {
-      margin-bottom: 4rem; } }
+      margin-bottom: 2rem;
+
+     
+
+    
+    } }
 
 .section__title {
   font-family: "Inter", sans-serif;
@@ -1478,7 +1492,11 @@ input {
     max-width: 65%; }
     @media (max-width: 47.93em) {
       .banner__side .banner__image-box {
-        max-width: 100%; } }
+        max-width: 100%; } 
+
+      
+      
+      }
   .banner__side .banner__textContent--side {
     max-width: 35%;
     width: 100%;
@@ -1991,7 +2009,13 @@ input {
   display: block; }
   @media (max-width: 47.93em) {
     .section__education-home .container [class^="col-"] {
-      margin-bottom: 6rem; } }
+      margin-bottom: 6rem; } 
+
+      
+    
+    
+    
+    }
 
 .section__canocrystals .section__title {
   font-family: 'Rota';
@@ -2143,6 +2167,7 @@ input {
   width: 100%; }
   @media (max-width: 62.1875em) {
     .shopbylist__list {
+      overflow-x: scroll !important;
       /*flex-wrap: wrap;*/ } }
 
 .shopbyshape__name {
@@ -4155,6 +4180,7 @@ input {
 }
 
 .cta-button1 {
+  margin-left: 0px !important;
   display: block;
   width: 100%;
   padding: 10px 40px !important;
@@ -4501,11 +4527,30 @@ body {
   .card-content1{
     display: flex;
   flex-wrap: wrap;
-    padding: 6px !important;
+   
   }
+  .name-fields1{
+    display: block;
+    padding: 8px 16px !important;
+
+  }
+  .field1{
+    width: 100%;
+  }
+  
   .card-content{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .info p{
+    font-size: 12px !important;
+  }
+  .card2{
+    display: none;
+ 
+    width: 50% !important;
+    align-items: center;
+    white-space: nowrap;
   }
   
 }
@@ -4561,7 +4606,7 @@ card-image1 {
 }
 
 .info {
-    margin-right: 24px;
+   
 }
 
 .info h3 {
@@ -4577,6 +4622,7 @@ card-image1 {
 }
 
 .cta-button {
+  margin-left: 0px !important;
     background-color: #E1DBD6;
     color: #5A4A42;
     text-align: center;
