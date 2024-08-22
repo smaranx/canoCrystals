@@ -193,3 +193,43 @@ function toggleForm(e){
         <label for="accountType">Account Type</label>
       </div>`
     }
+    document.addEventListener("DOMContentLoaded", function() {
+      // Ensure only the first dropdown is visible on page load
+      const dropdowns = document.querySelectorAll('.dropdown-content');
+      dropdowns.forEach((content, index) => {
+          if (index === 0) {
+              content.style.display = 'block'; // Open the first step's dropdown
+          } else {
+              content.style.display = 'none'; // Close all other dropdowns
+          }
+      });
+  });
+  
+  function toggleDropdown(step) {
+      const dropdowns = document.querySelectorAll('.dropdown-content');
+      const dropdownContent = dropdowns[step];
+      
+      // Close all dropdowns except the current one
+      dropdowns.forEach((content, index) => {
+          if (index !== step) {
+              content.style.display = 'none';
+          }
+      });
+  
+      // Toggle the current dropdown
+      dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+  }
+  
+  function changeStep(step) {
+      const dropdowns = document.querySelectorAll('.dropdown-content');
+      
+      // Close the current dropdown
+      dropdowns[step - 1].style.display = 'none';
+  
+      // Open the next dropdown
+      if (step < dropdowns.length) {
+          dropdowns[step].style.display = 'block';
+      }
+  }
+  
+  
