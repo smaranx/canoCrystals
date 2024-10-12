@@ -2084,7 +2084,7 @@ input {
       flex-direction: column;
       margin-bottom: 8rem; } }
   .dream__block-imgCol {
-    width: 45%;
+    width: 50%;
     position: relative; }
     @media (max-width: 75em) {
       .dream__block-imgCol {
@@ -2095,12 +2095,12 @@ input {
     .dream__block-imgCol img {
       position: absolute;
       left: 0;
-      top: 50%;
+      top: 0%;
       transform: translate(0, -50%);
       -webkit-transform: translate(0, -50%); }
       @media (max-width: 75em) {
         .dream__block-imgCol img {
-          width: 50rem; } }
+          width: 40rem; } }
       @media (max-width: 47.93em) {
         .dream__block-imgCol img {
           position: relative;
